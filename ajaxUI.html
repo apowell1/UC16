@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Number Facts</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="ajax.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Number Facts</h2>
+        <br/>
+        <p>First choose any of the types<b> Trivia, Math, Date, or Year</b> (defaults to Trivia). Then, enter random if you want a random fact, any integer less than 10,000, or a date in the form month/day if the type is Date. An example is <b>2/27</b>.</p>
+        <br>
+        <div>
+            <div id="typeBox" class="control-group">
+                <label for="dataType">Type</label>
+                <input type="text" name="dataType" id="dataType" placeholder="Type in your type of data" />
+        </div>
+            <br>
+        <div>
+            <div id="numBox" class="control-group">
+                <label for="numDate">Number or Date</label>
+                <input type="text" name="numDate" id="numDate" placeholder="Type in a number or date" /> </div>
+        </div>
+        <br/>
+        <div>
+            <button class='btn btn-success btn-large' onclick="findFacts('numDate', 'dataType')">Find Number Facts</button>
+        </div>
+        <br/>
+        <div>
+            <div id="facts" class=""></div>
+        </div>
+    </div>
+</body>
+
+</html>
